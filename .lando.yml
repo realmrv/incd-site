@@ -1,0 +1,9 @@
+name: site-app
+recipe: laravel
+config:
+  webroot: public
+  php: '7.4'
+  via: nginx
+  database: postgres:12
+  xdebug: true
+  cache: redis:5
