@@ -14,5 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('page/1');
 });
+
+Route::get('page/{id}', function ($id) {
+    return view('page', ['page_uid' => $id]);
+});
+
+Route::resource('data', 'App\Http\Controllers\DataController');
